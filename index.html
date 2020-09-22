@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <script src="Scripts/jquery-3.5.1.min.js"></script>
+    <script src="Scripts/defaultValues.js"></script>
+    <script src="Scripts/Translate.js"></script>
+    <script src="Scripts/myFunctions.js"></script>
+    <link rel="stylesheet" href="Styles/style.css">
+    
+</head>
+
+<body>
+
+    <!-- Note that id's need to be like names of resource files in order to work -->
+    <div style="text-align:center">
+        <ul id="SwitchLanguage">
+            <li>
+                <a  id="en" class="Languages" href="" data-tag="lbl_english"></a>
+            </li>
+            <li>
+                <a id="bg" class="Languages" href="" data-tag="lbl_bulgarian"></a>
+            </li>
+        </ul>
+    </div>
+
+    <div style="text-align:center">
+        <h1 data-tag="lbl_major_head"></h1>
+
+        <h3 data-tag="lbl_subheader"></h3>
+        <p data-tag="dsc_subheader"></p>
+
+        <form>
+            <div>
+                <h2>
+                    <label data-tag="lbl_contact">
+                    </label>
+                </h2>
+            </div>
+            <div>
+                <label class="customSpace" data-tag="lbl_email">
+                </label><input type="text" />
+            </div>
+            <div>
+                <label class="customSpace" data-tag="lbl_name">
+                </label><input type="text" />
+            </div>
+            <div>
+                <label class="customSpace" data-tag="lbl_subject">
+                </label><input type="text" />
+            </div>
+            <div>
+                <label class="customSpace" data-tag="lbl_message">
+                </label><input type="text"/>
+            </div>
+            <div style="margin-top: 20px;">
+                <input id="SendButton" type="button"/>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>
+
+
+<script>
+
+    $(document).ready(function () {
+        var myCookie = getCookie(_cookieName);
+        var currentLanguage = myCookie == null ? _defaultLanguage : myCookie;
+        var translate = new Language(currentLanguage);
+
+        $.getScript("Resources/" + currentLanguage +".js")
+            .done(function (data, textStatus, jqxhr) {
+                translateAll(translate);
+
+                $('#SendButton').val(translate.getVal('btn_text'));
+            })
+            .fail(function (jqxhr, settings, exception) {
+                alert('Script with translation not found.');
+            });
+    });
+
+    
+    $(".Languages").click(function () {
+        document.cookie = _cookieName +'='+ event.target.id +'; Path=/;';
+        location.reload();
+    });
+
+    $('#SendButton').click(function (){
+        alert(1);
+    });
+
+</script>
+
