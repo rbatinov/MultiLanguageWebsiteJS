@@ -16,5 +16,5 @@ var bg = {
     dsc_subheader: "Може да натиснете бутоните за езици в най-горната част на страницата, за да видите промяната.",
     btn_text: "Изпрати",
     lbl_project_developed: "Проектът е разработен от ",
-    lbl_project_developed: "Инж. Р. Батинов"
+    lbl_project_developer: "Инж. Р. Батинов"
 };
