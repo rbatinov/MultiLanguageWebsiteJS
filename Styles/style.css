@@ -40,3 +40,7 @@ form {
 *{
     font-family: 'Open Sans', sans-serif;
 }
+
+.align-center{
+    text-align: center;
+}
