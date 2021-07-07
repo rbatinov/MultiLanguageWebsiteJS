@@ -16,5 +16,5 @@ var en = {
     dsc_subheader: "You can click on the language buttons on top of the page to see the difference.",
     btn_text: "Send",
     lbl_project_developed: "Project Developed by ",
-    lbl_project_developed: "Eng. R. Batinov"
+    lbl_project_developer: "Eng. R. Batinov"
 };
