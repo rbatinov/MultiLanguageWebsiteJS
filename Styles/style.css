@@ -36,3 +36,7 @@ form {
     display: inline-block;
     width: 150px !important;
 }
+
+*{
+    font-family: 'Open Sans', sans-serif;
+}
