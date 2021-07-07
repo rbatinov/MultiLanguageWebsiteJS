@@ -14,5 +14,7 @@ var en = {
     lbl_major_head: "Multilanguage Website with JavaScript",
     lbl_subheader: "The purpose of this page is to show how changing the language translates the page.",
     dsc_subheader: "You can click on the language buttons on top of the page to see the difference.",
-    btn_text: "Send"
+    btn_text: "Send",
+    lbl_project_developed: "Project Developed by ",
+    lbl_project_developed: "Eng. R. Batinov"
 };
