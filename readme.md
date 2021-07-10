@@ -4,6 +4,8 @@ This is a <b>template for MultiLanguage support of a website</b>.
 It uses <b>only JavaScript</b> to implement the logic.
 It is <b>easy to implement</b> and does not require some extra frameworks or extensions.
 
+You can check here the [DEMO](https://rbatinov.github.io/MultiLanguageWebsiteJS/)
+
 <b>Structure of Project:</b>
 - <b>Resources Folder</b>
     - Here you can store all files with translations - in this example these are <b>en.js and bg.js</b>. 
